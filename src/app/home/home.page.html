@@ -1,13 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title >
+      Home
     </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar placeholder="Search here..." color="light"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div class="w-full h-full bg-indigo-500">
-
+<ion-content>
+  <div class="w-full h-56 items-center justify-center">
+    <img src="../../assets/img/images.jpeg" alt="" class="rounded-full items-center justify-center h">
   </div>
 </ion-content>
+<ion-footer class="!bg-white border-t">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="w-full flex justify-around">
+      <ion-button fill="clear" (click)="navigateToMessages()"><ion-icon name="chatbubble-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="call-outline"></ion-icon></ion-button>
+      <ion-button fill="clear" (click)="navigateToProfil()"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="settings-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar style="--background: #60a5fa;" class="ion-no-border">
+    <ion-title class="text-xl font-semibold">Chats</ion-title>
+  </ion-toolbar>
+  <ion-toolbar style="--background: #60a5fa;">
+    <ion-searchbar placeholder="Search here..." color="light"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-white">
+  <div class="p-4 space-y-4">
+    <div
+    *ngFor="let chat of chats"
+    class="flex items-center justify-between p-4 rounded-md cursor-pointer select-none transition-colors duration-150 ease-in-out hover:bg-gray-100 active:bg-gray-200"
+    (click)="navigateToMessages()"
+    >
+    <div class="flex items-center gap-4">
+      <img [src]="chat.avatar" alt="avatar" class="w-12 h-12 rounded-full" />
+      <div>
+        <div class="font-medium">{{ chat.name }}</div>
+        <div class="text-sm text-gray-500">{{ chat.message }}</div>
+      </div>
+    </div>
+    <div class="text-right text-xs text-gray-400">
+      <div>{{ chat.time }}</div>
+      <div *ngIf="chat.status" class="text-green-500">{{ chat.status }}</div>
+    </div>
+  </div>
+  
+  </div>
+</ion-content>
+
+<ion-footer class="!bg-white border-t">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="w-full flex justify-around">
+      <ion-button fill="clear"><ion-icon name="chatbubble-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="call-outline"></ion-icon></ion-button>
+      <ion-button fill="clear" (click)="navigateToProfil()"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="settings-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
