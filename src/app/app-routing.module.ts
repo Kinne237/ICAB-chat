@@ -8,8 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'chats',
     pathMatch: 'full'
+  },
+  {
+    path: 'chats',
+    loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
+  },
+  {
+    path: 'chat-room',
+    loadChildren: () => import('./chat-room/chat-room.module').then( m => m.ChatRoomPageModule)
+  },
+  {
+    path: 'profil',
+    loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
   },
 ];
 

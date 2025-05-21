@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="bg-white">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-black font-medium">Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-50">
+  <div class="flex flex-col w-full h-full bg-gray-100">
+    <div class="flex flex-col w-full items-center py-6 px-4">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+        alt="Avatar"
+        class="w-32 h-32 rounded-full object-cover shadow-lg"
+      />
+  
+      <h2 class="mt-4 text-xl font-semibold text-gray-900">Modifier la photo</h2>
+  
+      <div class="flex gap-6 mt-4">
+        <ion-icon name="chatbubble-ellipses-outline" class="text-2xl text-primary"></ion-icon>
+        <ion-icon name="call-outline" class="text-2xl text-primary"></ion-icon>
+        <ion-icon name="videocam-outline" class="text-2xl text-primary"></ion-icon>
+      </div>
+    </div>
+    
+    <div class="flex flex-col mt-4 px-4 space-y-2">
+      <div>
+        <p class="text-gray-900">Nom</p>
+        <input type="text" class="rounded-lg bg-white w-full relative text-sm p-2 focus:outline-none" value="Inesse NGOUMLACK">
+      </div>
+      <div>
+        <p class="text-gray-900">Numéro</p>
+        <input type="text" class="rounded-lg bg-white w-full relative text-sm p-2 focus:outline-none" value="+237 6 12 34 56 78">
+      </div>
+      <div>
+        <p class="text-gray-900">Email</p>
+        <input type="text" class="rounded-lg bg-white w-full relative text-sm p-2 focus:outline-none" value="Kinnengoumlack@gmail.com">
+      </div>
+      <div> 
+        <p class="text-gray-900">Infos</p>
+        <div class="rounded-lg bg-white w-full relative p-2">
+          <p class="text-gray-500 text-sm">Departement</p>
+          <div class="mx-2">
+            Informatique
+          </div>
+          <p class="text-gray-500 text-sm">Specialite</p>
+          <div class="mx-2">
+            Genie logiciel
+          </div>
+          <p class="text-gray-500 text-sm">Niveau</p>
+          <div class="mx-2">
+            Licence
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</ion-content>
