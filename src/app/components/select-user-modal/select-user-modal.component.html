@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ mode === 'group' ? 'Créer un groupe' : 'Nouvelle conversation' }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users" (click)="toggleSelection(user.id)">
+      <ion-label>{{ user.username }}</ion-label>
+
+      <ion-checkbox
+        *ngIf="mode === 'group'"
+        slot="end"
+        [checked]="selectedUserIds.includes(user.id)"
+        disabled
+      ></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-footer *ngIf="mode === 'group'">
+    <ion-button
+      expand="block"
+      color="primary"
+      [disabled]="selectedUserIds.length < 2"
+      (click)="validateGroupCreation()"
+    >
+      Créer le groupe
+    </ion-button>
+  </ion-footer>
+</ion-content>

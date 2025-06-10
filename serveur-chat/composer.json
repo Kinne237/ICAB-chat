@@ -1,0 +1,17 @@
+{
+    "name": "ngoumlack/serveur-chat",
+    "autoload": {
+        "psr-4": {
+            "Ngoumlack\\ServeurChat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kinne237",
+            "email": "kinnengoumlack@gmail.com"
+        }
+    ],
+    "require": {
+        "cboden/ratchet": "^0.4.4"
+    }
+}

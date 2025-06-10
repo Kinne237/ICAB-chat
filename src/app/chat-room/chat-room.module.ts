@@ -7,14 +7,21 @@ import { IonicModule } from '@ionic/angular';
 import { ChatRoomPageRoutingModule } from './chat-room-routing.module';
 
 import { ChatRoomPage } from './chat-room.page';
+import { WebsocketService } from '../services/websocket.service';
+import { AuthService } from '../services/auth/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ChatRoomService } from '../services/chat-room/chat-room.service';
+import { UserService } from '../services/user/user.service';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ChatRoomPageRoutingModule
+    ChatRoomPageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [ChatRoomPage]
+  declarations: [ChatRoomPage],
+  providers: [WebsocketService, AuthService, ChatRoomService, UserService],
 })
 export class ChatRoomPageModule {}

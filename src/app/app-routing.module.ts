@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'chats',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -16,13 +16,25 @@ const routes: Routes = [
     loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
   },
   {
-    path: 'chat-room',
+    path: 'messages/:id/:otherUserId',
     loadChildren: () => import('./chat-room/chat-room.module').then( m => m.ChatRoomPageModule)
   },
   {
     path: 'profil',
     loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'group-chat-room/:group_id',
+    loadChildren: () => import('./pages/group-chat-room/group-chat-room.module').then( m => m.GroupChatRoomPageModule)
+  },
+  {
+    path: 'group-chat-room',
+    loadChildren: () => import('./pages/group-chat-room/group-chat-room.module').then( m => m.GroupChatRoomPageModule)
+  }
 ];
 
 @NgModule({
